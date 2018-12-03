@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import List from './List';
 
 class TodoList extends Component {
   constructor(props) {
@@ -16,6 +17,9 @@ class TodoList extends Component {
           <input value={this.state.term} onChange={this._onChange} placeholder='enter todo.'></input>
           <button type='submit'>add</button>
         </form>
+        <div>
+          <List items={this.state.items} />
+        </div>
       </div>
     )
   }
